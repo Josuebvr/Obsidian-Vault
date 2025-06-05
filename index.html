@@ -162,6 +162,11 @@
             margin-right: 5px;
         }
         
+        .loading {
+            color: var(--secondary-color);
+            font-style: italic;
+        }
+        
         @media (max-width: 768px) {
             .notes-container {
                 grid-template-columns: 1fr;
@@ -186,7 +191,12 @@
             <div class="sidebar">
                 <h2>Arquivos</h2>
                 <ul class="note-list" id="noteList">
-                    <!-- Lista de notas será preenchida por JavaScript -->
+                    <li class="note-item"><a href="#" class="note-link" onclick="displayNote('Lançamento')">Lançamento</a></li>
+                    <li class="note-item"><a href="#" class="note-link" onclick="displayNote('Live')">Live</a></li>
+                    <li class="note-item"><a href="#" class="note-link" onclick="displayNote('Fotos')">Fotos</a></li>
+                    <li class="note-item"><a href="#" class="note-link" onclick="displayNote('Indica')">Indica</a></li>
+                    <li class="note-item"><a href="#" class="note-link" onclick="displayNote('Marketing')">Marketing</a></li>
+                    <li class="note-item"><a href="#" class="note-link" onclick="displayNote('Vídeos')">Vídeos</a></li>
                 </ul>
             </div>
             
@@ -200,88 +210,87 @@
     </div>
 
     <script>
-        // Dados das notas (simulando o conteúdo dos arquivos)
-        const notes = {
-            "Lançamento": {
-                content: `-Transformar a palestra de investimento em 5 lives de 1 hora\n\n-Passar o conteúdo da [[live]] no filtro\n\t-Tem que soar simples para a pessoa\n\t-Tem que estar ligado a desejos, sonhos e objetivos\n\t-Tem que apelar para o emocional\n\t-Tem que criar uma historia, uma jornada, uma ascensão \n\n-Depois de ter a palestra preparada começamos com o [[Marketing]], vai ser uma semana de [[Marketing]] e uma semana com as lives, no final de semana acontecerão as vendas`,
-                links: ["Indica", "live", "Marketing"]
-            },
-            "Live": {
-                content: `-Configurar o OBS\n\t-Jogo de câmera\n\t\t-Câmera para tela\n\t\t-Transições\n\t\t-Vinhetas\n\t-Configurar a transmissão \n\t\t-Conectar com Youtube\n\t-Configurar áudio\n\t\t-Configurar microfone\n\t\t-Configurar filtros\n\n\n-Preparar equipamentos\n\t-Conectar câmera no OBS\n\t-Preparar iluminação\n\t-Testar microfone\n\n\n-Preparar conta Youtube\n\t-Criar ou configurar conta no Youtube\n\t-Conectar no OBS\n\n-Analisar script`,
-                links: []
-            },
-            "Fotos": {
-                content: "[[marketing]]",
-                links: ["marketing"]
-            },
-            "Indica": {
-                content: "[[Lançamento]]\n[[Marketing]]",
-                links: ["Lançamento", "Marketing"]
-            },
-            "Marketing": {
-                content: `[[Indica]]\n\n-Analisar a concorrência\n\t-Pedro Sobral\n\t-Cursos de vender cursos\n\n\n-Tirar [[fotos]] para fotoshop\n\t-Tirar as [[fotos]] no estúdio\n\t\t-Ir no barbeiro\n\t\t-Estar arrumado\n\t-Editar as [[fotos]]\n\t-Preparar a publicidade com a imagem no canvas\t\n\n\n-Gravar [[vídeos]]\n\t-Gravar [[vídeos]] no estúdio\n\t\t-Ir no barbeiro\n\t\t-Estar arrumado\n\t-Editar os [[vídeos]]\n\n\n-Configurar trafego pago\n\n-Analisar as métricas \n\n-Depois de tudo isso, fazer o [[Lançamento]]`,
-                links: ["Indica", "fotos", "vídeos", "Lançamento"]
-            },
-            "Vídeos": {
-                content: "[[marketing]]",
-                links: ["marketing"]
-            }
-        };
-
-        // Função para renderizar a lista de notas
-        function renderNoteList() {
-            const noteList = document.getElementById('noteList');
-            noteList.innerHTML = '';
-            
-            Object.keys(notes).forEach(noteName => {
-                const li = document.createElement('li');
-                li.className = 'note-item';
-                
-                const a = document.createElement('a');
-                a.href = '#';
-                a.className = 'note-link';
-                a.textContent = noteName;
-                a.onclick = () => displayNote(noteName);
-                
-                li.appendChild(a);
-                noteList.appendChild(li);
-            });
-        }
-
-        // Função para exibir o conteúdo de uma nota
-        function displayNote(noteName) {
-            if (!notes[noteName]) return;
-            
+        // Configuração - substitua com seu usuário e repositório do GitHub
+        const githubUser = 'Josuebvr';
+        const githubRepo = 'Obsidian-Vault';
+        const branch = 'main'; // ou 'master' dependendo do seu repositório
+        
+        // Função para carregar o conteúdo de um arquivo do GitHub
+        async function loadNoteContent(noteName) {
             const noteContent = document.getElementById('noteContent');
-            const note = notes[noteName];
-            
-            // Atualizar links ativos na sidebar
-            document.querySelectorAll('.note-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.textContent === noteName) {
-                    link.classList.add('active');
-                }
-            });
-            
-            // Renderizar o conteúdo da nota
             noteContent.innerHTML = `
                 <h2 class="note-title">${noteName}</h2>
-                <div class="note-body">${formatNoteContent(note.content)}</div>
-                ${note.links.length ? `
-                <div class="backlinks">
-                    <h3>Links nesta nota</h3>
-                    <ul class="backlink-list">
-                        ${note.links.map(link => `
-                            <li class="backlink-item">
-                                <a href="#" onclick="displayNote('${link}')">${link}</a>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </div>
-                ` : ''}
+                <div class="note-body loading">Carregando...</div>
             `;
+            
+            try {
+                // Atualizar links ativos na sidebar
+                document.querySelectorAll('.note-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.textContent === noteName) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Construir o nome do arquivo
+                let filename;
+                switch(noteName) {
+                    case 'Vídeos':
+                        filename = 'Vídeos.md';
+                        break;
+                    default:
+                        filename = `${noteName}.md`;
+                }
+                
+                // Fazer requisição para o arquivo no GitHub
+                const response = await fetch(`https://raw.githubusercontent.com/${githubUser}/${githubRepo}/${branch}/${filename}`);
+                
+                if (!response.ok) {
+                    throw new Error('Arquivo não encontrado');
+                }
+                
+                const content = await response.text();
+                
+                // Extrair links do conteúdo
+                const links = extractLinks(content);
+                
+                // Exibir o conteúdo formatado
+                noteContent.innerHTML = `
+                    <h2 class="note-title">${noteName}</h2>
+                    <div class="note-body">${formatNoteContent(content)}</div>
+                    ${links.length ? `
+                    <div class="backlinks">
+                        <h3>Links nesta nota</h3>
+                        <ul class="backlink-list">
+                            ${links.map(link => `
+                                <li class="backlink-item">
+                                    <a href="#" onclick="displayNote('${link}')">${link}</a>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                    ` : ''}
+                `;
+                
+            } catch (error) {
+                noteContent.innerHTML = `
+                    <h2 class="note-title">${noteName}</h2>
+                    <div class="note-body">
+                        <p>Erro ao carregar a nota: ${error.message}</p>
+                        <p>Verifique se o arquivo "${noteName}.md" existe no repositório.</p>
+                    </div>
+                `;
+            }
         }
-
+        
+        // Função para extrair links [[...]] do conteúdo
+        function extractLinks(content) {
+            const linkRegex = /\[\[(.*?)\]\]/g;
+            const matches = [...content.matchAll(linkRegex)];
+            const uniqueLinks = [...new Set(matches.map(match => match[1]))];
+            return uniqueLinks;
+        }
+        
         // Função para formatar o conteúdo da nota (transformar markdown simples em HTML)
         function formatNoteContent(content) {
             // Processar listas
@@ -300,18 +309,29 @@
             
             return html;
         }
-
+        
+        // Função para exibir uma nota
+        function displayNote(noteName) {
+            // Atualizar a URL sem recarregar a página
+            history.pushState(null, null, `#${noteName}`);
+            loadNoteContent(noteName);
+        }
+        
         // Inicializar a página
         window.onload = function() {
-            renderNoteList();
-            
             // Se houver um hash na URL, carregar a nota correspondente
             if (window.location.hash) {
                 const noteName = window.location.hash.substring(1);
-                if (notes[noteName]) {
+                displayNote(noteName);
+            }
+            
+            // Lidar com o botão voltar/avancar do navegador
+            window.addEventListener('popstate', function() {
+                if (window.location.hash) {
+                    const noteName = window.location.hash.substring(1);
                     displayNote(noteName);
                 }
-            }
+            });
         };
     </script>
 </body>
