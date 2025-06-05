@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Indica Investimentos/Campanha de Lançamento/Lançamento/Lançamento.md",
+                "file": "Indica Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lançamento"
+              "title": "Vídeos"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Indica Investimentos/Campanha de Lançamento/Lançamento/Lançamento.md",
+                "file": "Indica Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para Lançamento"
+              "title": "Links inversos para Vídeos"
             }
           },
           {
@@ -128,13 +128,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Indica Investimentos/Campanha de Lançamento/Lançamento/Lançamento.md",
+                "file": "Indica Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sumário de Lançamento"
+              "title": "Sumário de Vídeos"
             }
           },
           {
@@ -153,12 +153,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Indica Investimentos/Campanha de Lançamento/Lançamento/Lançamento.md",
+                "file": "Indica Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Links de saída para Lançamento"
+              "title": "Links de saída para Vídeos"
             }
           }
         ],
@@ -181,13 +181,13 @@
   },
   "active": "ff87ca3b731658f1",
   "lastOpenFiles": [
+    "Indica Investimentos/Campanha de Lançamento/Lançamento/Lançamento.md",
     "index.html",
     "Indica Investimentos/Campanha de Lançamento/index.html",
     "Indica Investimentos/Campanha de Lançamento/Lançamento/Live.md",
     "Indica Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
     "Indica Investimentos/Campanha de Lançamento/Marketing/Fotos.md",
     "Indica Investimentos/Campanha de Lançamento/Marketing/Marketing.md",
-    "Indica Investimentos/Campanha de Lançamento/Lançamento/Lançamento.md",
     "Indica Investimentos/Campanha de Lançamento/Indica.md",
     "Indica Investimentos/Campanha de Lançamento/Lançamento",
     "Indica Investimentos/Campanha de Lançamento/Marketing",
