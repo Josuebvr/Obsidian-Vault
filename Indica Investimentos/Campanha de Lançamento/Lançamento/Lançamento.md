@@ -1,7 +1,8 @@
+[[Indica]]
 
 -Transformar a palestra de investimento em 5 lives de 1 hora
 
--Passar o conteúdo da live no filtro
+-Passar o conteúdo da [[live]] no filtro
 	-Tem que soar simples para a pessoa
 	-Tem que estar ligado a desejos, sonhos e objetivos
 	-Tem que apelar para o emocional

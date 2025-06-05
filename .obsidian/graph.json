@@ -5,8 +5,30 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "Indica",
+      "color": {
+        "a": 1,
+        "rgb": 12882491
+      }
+    },
+    {
+      "query": "Lançamento",
+      "color": {
+        "a": 1,
+        "rgb": 4598985
+      }
+    },
+    {
+      "query": "Marketing",
+      "color": {
+        "a": 1,
+        "rgb": 10688793
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -18,5 +40,5 @@
   "linkStrength": 1,
   "linkDistance": 250,
   "scale": 1.053497942386833,
-  "close": true
+  "close": false
 }
