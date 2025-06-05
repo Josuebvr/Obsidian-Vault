@@ -1,0 +1,185 @@
+{
+  "main": {
+    "id": "a65a7cf22e10878a",
+    "type": "split",
+    "children": [
+      {
+        "id": "4c25aea73b9e0eb1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "79c7dea115148d42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Indica Investimentos/Campanha de Lançamento/Lançamento.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lançamento"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8d73ff03b0fc5d4c",
+    "type": "split",
+    "children": [
+      {
+        "id": "9bb84b41c432acae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "750e5b4ea6b50418",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "4791f74df5e58d35",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "2106f3636a7fb15b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5740af5d162ab3b3",
+    "type": "split",
+    "children": [
+      {
+        "id": "8c2404af8504253f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d3a1f266834c2c42",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Indica Investimentos/Campanha de Lançamento/Lançamento.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para Lançamento"
+            }
+          },
+          {
+            "id": "9e9445c3aadd26e5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Indica Investimentos/Campanha de Lançamento/Lançamento.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Lançamento"
+            }
+          },
+          {
+            "id": "dcb2bdecb5d96bfd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "5f04851bd69741b3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Indica Investimentos/Campanha de Lançamento/Lançamento.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Lançamento"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "79c7dea115148d42",
+  "lastOpenFiles": [
+    "README.md",
+    "Indica Investimentos/Campanha de Lançamento/Lançamento.md",
+    "Indica Investimentos/Campanha de Lançamento",
+    "Sem título",
+    "Indica Investimentos/Campanha de Lançamento.md",
+    "Sem título.canvas",
+    "Indica Investimentos/Campanha de Lançamento/Marketing.md",
+    "Indica Investimentos",
+    "2025-06-05.md",
+    "Bem-vindo.md",
+    "crie um link.md"
+  ]
+}
