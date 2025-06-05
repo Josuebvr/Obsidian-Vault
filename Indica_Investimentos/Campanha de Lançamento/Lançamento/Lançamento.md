@@ -8,7 +8,7 @@
 	-Tem que apelar para o emocional
 	-Tem que criar uma historia, uma jornada, uma ascensão 
 
--Depois de ter a palestra preparada começamos com o [[Marketing]], vai ser uma semana de [[Marketing]] e uma semana com as lives, no final de semana acontecerão as vendas
+-Depois de ter a palestra preparada começamos com a [[Produção de conteúdo]] e com o [[Marketing]], vai ser uma semana de [[Marketing]] e uma semana com as lives, no final de semana acontecerão as vendas
 
 
 

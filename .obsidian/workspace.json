@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a0579806726ce5c8",
+        "id": "8e4abc5b566046d0",
         "type": "tabs",
         "children": [
           {
-            "id": "ff87ca3b731658f1",
+            "id": "49eddf5f4df73e1b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Indica Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Vídeos"
+              "title": "Nova aba"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Indica Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para Vídeos"
+              "title": "Backlinks"
             }
           },
           {
@@ -128,13 +123,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Indica Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sumário de Vídeos"
+              "title": "Sumário"
             }
           },
           {
@@ -153,12 +147,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Indica Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Links de saída para Vídeos"
+              "title": "Links de saída"
             }
           }
         ],
@@ -170,8 +163,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir a troca rápida": false,
       "graph:Abrir visualização em gráfico": false,
+      "switcher:Abrir a troca rápida": false,
       "canvas:Criar novo canvas": false,
       "daily-notes:Abrir a nota de hoje": false,
       "templates:Inserir modelo": false,
@@ -179,27 +172,44 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ff87ca3b731658f1",
+  "active": "49eddf5f4df73e1b",
   "lastOpenFiles": [
-    "Indica Investimentos/Campanha de Lançamento/Lançamento/Lançamento.md",
-    "index.html",
-    "Indica Investimentos/Campanha de Lançamento/index.html",
+    "Indica Investimentos/Campanha de Lançamento/Redes Sociais/Instagram.md",
+    "Indica_Investimentos/Campanha de Lançamento/Marketing/Produção de conteúdo.md",
+    "Indica_Investimentos/Campanha de Lançamento/Redes Sociais/YouTube.md",
+    "Indica_Investimentos/Campanha de Lançamento/Redes Sociais/WhatsApp.md",
+    "Indica_Investimentos/Campanha de Lançamento/Redes Sociais/Tik Tok.md",
+    "Indica_Investimentos/Campanha de Lançamento/Redes Sociais/Instagram.md",
+    "Indica_Investimentos/Campanha de Lançamento/Redes Sociais/Facebook.md",
+    "Indica_Investimentos/Campanha de Lançamento/Redes Sociais/Email.md",
+    "Indica_Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
+    "Indica_Investimentos/Campanha de Lançamento/Marketing/Marketing.md",
+    "Indica_Investimentos/Campanha de Lançamento/Lançamento/Live.md",
+    "Indica_Investimentos/Campanha de Lançamento/Marketing/Fotos.md",
+    "Indica_Investimentos/Campanha de Lançamento/Lançamento/Lançamento.md",
+    "Indica_Investimentos/Campanha de Lançamento/Lançamento/Estrutura da antecipação.md",
+    "Indica_Investimentos/Campanha de Lançamento/Lançamento/Antecipação.md",
+    "Indica_Investimentos/Campanha de Lançamento/Redes Sociais",
+    "Indica_Investimentos/Campanha de Lançamento/Marketing",
+    "Indica_Investimentos/Campanha de Lançamento/Lançamento",
+    "Indica_Investimentos/Campanha de Lançamento",
+    "Indica_Investimentos",
+    "script.js",
+    "style.css",
+    "Indica Investimentos/Campanha de Lançamento/Marketing/Marketing.md",
+    "Indica Investimentos/Campanha de Lançamento/Lançamento/Antecipação.md",
     "Indica Investimentos/Campanha de Lançamento/Lançamento/Live.md",
+    "Indica Investimentos/Campanha de Lançamento/Lançamento/Lançamento.md",
+    "Indica Investimentos/Campanha de Lançamento/Lançamento/Estrutura da antecipação.md",
+    "Indica Investimentos/Campanha de Lançamento/Redes Sociais/Email.md",
     "Indica Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
     "Indica Investimentos/Campanha de Lançamento/Marketing/Fotos.md",
-    "Indica Investimentos/Campanha de Lançamento/Marketing/Marketing.md",
-    "Indica Investimentos/Campanha de Lançamento/Indica.md",
-    "Indica Investimentos/Campanha de Lançamento/Lançamento",
-    "Indica Investimentos/Campanha de Lançamento/Marketing",
-    "Sem título.md",
-    "README.md",
-    "Indica Investimentos/Campanha de Lançamento",
-    "Sem título",
-    "Indica Investimentos/Campanha de Lançamento.md",
+    "Indica Investimentos/Campanha de Lançamento/Redes Sociais/YouTube.md",
+    "Indica Investimentos/Campanha de Lançamento/Redes Sociais/WhatsApp.md",
+    "Indica Investimentos/Campanha de Lançamento/Redes Sociais/Facebook.md",
+    "Indica Investimentos/Campanha de Lançamento/Redes Sociais",
     "Sem título.canvas",
-    "Indica Investimentos",
-    "2025-06-05.md",
-    "Bem-vindo.md",
-    "crie um link.md"
+    "Indica Investimentos/Campanha de Lançamento/Antecipação",
+    "Indica Investimentos/Antecipação"
   ]
 }
