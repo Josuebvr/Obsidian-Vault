@@ -11,10 +11,14 @@
             "id": "eb76ec2d983befeb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Indica Investimentos/Campanha de Lançamento/Marketing.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Marketing"
             }
           }
         ]
@@ -90,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Indica Investimentos/Campanha de Lançamento/Marketing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,21 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para README"
-            }
-          },
-          {
-            "id": "9e9445c3aadd26e5",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "README.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": false
-              },
-              "icon": "links-going-out",
-              "title": "Links de saída para README"
+              "title": "Links inversos para Marketing"
             }
           },
           {
@@ -138,13 +128,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "Indica Investimentos/Campanha de Lançamento/Marketing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sumário de README"
+              "title": "Sumário de Marketing"
             }
           },
           {
@@ -155,6 +145,20 @@
               "state": {},
               "icon": "git-pull-request",
               "title": "Source Control"
+            }
+          },
+          {
+            "id": "9e9445c3aadd26e5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Indica Investimentos/Campanha de Lançamento/Marketing.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Marketing"
             }
           }
         ],
@@ -175,15 +179,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "750e5b4ea6b50418",
+  "active": "9e9445c3aadd26e5",
   "lastOpenFiles": [
-    "Indica Investimentos/Campanha de Lançamento/Lançamento.md",
     "README.md",
+    "Indica Investimentos/Campanha de Lançamento/Marketing.md",
+    "Indica Investimentos/Campanha de Lançamento/Lançamento.md",
     "Indica Investimentos/Campanha de Lançamento",
     "Sem título",
     "Indica Investimentos/Campanha de Lançamento.md",
     "Sem título.canvas",
-    "Indica Investimentos/Campanha de Lançamento/Marketing.md",
     "Indica Investimentos",
     "2025-06-05.md",
     "Bem-vindo.md",
