@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4951c453fe28484c",
+        "id": "a0579806726ce5c8",
         "type": "tabs",
         "children": [
           {
-            "id": "42bad4034ae65cfa",
+            "id": "ff87ca3b731658f1",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Visualização em gráfico"
+              "icon": "lucide-file",
+              "title": "Nova aba"
             }
           }
         ]
@@ -172,8 +172,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "42bad4034ae65cfa",
+  "active": "ff87ca3b731658f1",
   "lastOpenFiles": [
+    "index.html",
+    "Indica Investimentos/Campanha de Lançamento/index.html",
     "Indica Investimentos/Campanha de Lançamento/Lançamento/Live.md",
     "Indica Investimentos/Campanha de Lançamento/Marketing/Vídeos.md",
     "Indica Investimentos/Campanha de Lançamento/Marketing/Fotos.md",

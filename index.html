@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Anotações do Obsidian</title>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --dark-color: #2d3436;
+            --light-color: #f5f6fa;
+            --success-color: #00b894;
+            --warning-color: #fdcb6e;
+            --danger-color: #d63031;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .notes-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+        }
+        
+        .sidebar {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+        }
+        
+        .sidebar h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .note-list {
+            list-style: none;
+        }
+        
+        .note-item {
+            margin-bottom: 10px;
+        }
+        
+        .note-link {
+            display: block;
+            padding: 10px 15px;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .note-link:hover, .note-link.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .note-content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .note-title {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .note-body {
+            white-space: pre-wrap;
+        }
+        
+        .note-body ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .note-body li {
+            margin-bottom: 8px;
+        }
+        
+        .backlinks {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .backlinks h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .backlink-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+        
+        .backlink-item a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            background-color: var(--warning-color);
+            color: var(--dark-color);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .notes-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Minhas Anotações</h1>
+            <p class="subtitle">Visualização das notas sincronizadas do Obsidian</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="notes-container">
+            <div class="sidebar">
+                <h2>Arquivos</h2>
+                <ul class="note-list" id="noteList">
+                    <!-- Lista de notas será preenchida por JavaScript -->
+                </ul>
+            </div>
+            
+            <div class="note-content" id="noteContent">
+                <h2 class="note-title">Selecione uma nota</h2>
+                <div class="note-body">
+                    <p>Clique em uma das notas à esquerda para visualizar seu conteúdo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dados das notas (simulando o conteúdo dos arquivos)
+        const notes = {
+            "Lançamento": {
+                content: `-Transformar a palestra de investimento em 5 lives de 1 hora\n\n-Passar o conteúdo da [[live]] no filtro\n\t-Tem que soar simples para a pessoa\n\t-Tem que estar ligado a desejos, sonhos e objetivos\n\t-Tem que apelar para o emocional\n\t-Tem que criar uma historia, uma jornada, uma ascensão \n\n-Depois de ter a palestra preparada começamos com o [[Marketing]], vai ser uma semana de [[Marketing]] e uma semana com as lives, no final de semana acontecerão as vendas`,
+                links: ["Indica", "live", "Marketing"]
+            },
+            "Live": {
+                content: `-Configurar o OBS\n\t-Jogo de câmera\n\t\t-Câmera para tela\n\t\t-Transições\n\t\t-Vinhetas\n\t-Configurar a transmissão \n\t\t-Conectar com Youtube\n\t-Configurar áudio\n\t\t-Configurar microfone\n\t\t-Configurar filtros\n\n\n-Preparar equipamentos\n\t-Conectar câmera no OBS\n\t-Preparar iluminação\n\t-Testar microfone\n\n\n-Preparar conta Youtube\n\t-Criar ou configurar conta no Youtube\n\t-Conectar no OBS\n\n-Analisar script`,
+                links: []
+            },
+            "Fotos": {
+                content: "[[marketing]]",
+                links: ["marketing"]
+            },
+            "Indica": {
+                content: "[[Lançamento]]\n[[Marketing]]",
+                links: ["Lançamento", "Marketing"]
+            },
+            "Marketing": {
+                content: `[[Indica]]\n\n-Analisar a concorrência\n\t-Pedro Sobral\n\t-Cursos de vender cursos\n\n\n-Tirar [[fotos]] para fotoshop\n\t-Tirar as [[fotos]] no estúdio\n\t\t-Ir no barbeiro\n\t\t-Estar arrumado\n\t-Editar as [[fotos]]\n\t-Preparar a publicidade com a imagem no canvas\t\n\n\n-Gravar [[vídeos]]\n\t-Gravar [[vídeos]] no estúdio\n\t\t-Ir no barbeiro\n\t\t-Estar arrumado\n\t-Editar os [[vídeos]]\n\n\n-Configurar trafego pago\n\n-Analisar as métricas \n\n-Depois de tudo isso, fazer o [[Lançamento]]`,
+                links: ["Indica", "fotos", "vídeos", "Lançamento"]
+            },
+            "Vídeos": {
+                content: "[[marketing]]",
+                links: ["marketing"]
+            }
+        };
+
+        // Função para renderizar a lista de notas
+        function renderNoteList() {
+            const noteList = document.getElementById('noteList');
+            noteList.innerHTML = '';
+            
+            Object.keys(notes).forEach(noteName => {
+                const li = document.createElement('li');
+                li.className = 'note-item';
+                
+                const a = document.createElement('a');
+                a.href = '#';
+                a.className = 'note-link';
+                a.textContent = noteName;
+                a.onclick = () => displayNote(noteName);
+                
+                li.appendChild(a);
+                noteList.appendChild(li);
+            });
+        }
+
+        // Função para exibir o conteúdo de uma nota
+        function displayNote(noteName) {
+            if (!notes[noteName]) return;
+            
+            const noteContent = document.getElementById('noteContent');
+            const note = notes[noteName];
+            
+            // Atualizar links ativos na sidebar
+            document.querySelectorAll('.note-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.textContent === noteName) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Renderizar o conteúdo da nota
+            noteContent.innerHTML = `
+                <h2 class="note-title">${noteName}</h2>
+                <div class="note-body">${formatNoteContent(note.content)}</div>
+                ${note.links.length ? `
+                <div class="backlinks">
+                    <h3>Links nesta nota</h3>
+                    <ul class="backlink-list">
+                        ${note.links.map(link => `
+                            <li class="backlink-item">
+                                <a href="#" onclick="displayNote('${link}')">${link}</a>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                ` : ''}
+            `;
+        }
+
+        // Função para formatar o conteúdo da nota (transformar markdown simples em HTML)
+        function formatNoteContent(content) {
+            // Processar listas
+            let html = content.replace(/^- (.*$)/gm, '<li>$1</li>');
+            html = html.replace(/^\t- (.*$)/gm, '<li style="margin-left: 20px;">$1</li>');
+            html = html.replace(/^\t\t- (.*$)/gm, '<li style="margin-left: 40px;">$1</li>');
+            
+            // Agrupar itens de lista em ULs (simplificado)
+            html = html.replace(/(<li>.*<\/li>)+/gms, '<ul>$&</ul>');
+            
+            // Processar links [[...]]
+            html = html.replace(/\[\[(.*?)\]\]/g, '<a href="#" onclick="displayNote(\'$1\')" class="tag">$1</a>');
+            
+            // Manter quebras de linha
+            html = html.replace(/\n\n/g, '<br><br>');
+            
+            return html;
+        }
+
+        // Inicializar a página
+        window.onload = function() {
+            renderNoteList();
+            
+            // Se houver um hash na URL, carregar a nota correspondente
+            if (window.location.hash) {
+                const noteName = window.location.hash.substring(1);
+                if (notes[noteName]) {
+                    displayNote(noteName);
+                }
+            }
+        };
+    </script>
+</body>
+</html>
